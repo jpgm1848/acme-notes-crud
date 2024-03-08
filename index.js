@@ -84,6 +84,7 @@ app.delete("/api/notes/:id", async (req, res, next) => {
   }
 });
 
+
 app.use((err, req, res, next) => {
   console.log(err);
   res.status(err.status || 500).send({ message: err.message || err });
